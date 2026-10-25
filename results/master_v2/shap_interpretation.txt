@@ -1,0 +1,17 @@
+Interpretasi SHAP XGBoost (Baseline):
+- Fitur dengan kontribusi global terbesar: Height.
+- Mean |SHAP| tertinggi: 5.807655 log-odds.
+- Ranking aktual: Height > Age (Month) > Gender > Weight (lihat Rank untuk nilai seri).
+- SHAP positif meningkatkan output menuju Stunted relatif terhadap nilai dasar; SHAP negatif menurunkannya.
+- Weight: Mean |SHAP|=0.189998, rank=4; ini kontribusi terhadap model, bukan bukti kausal/signifikansi.
+- Gender: Mean |SHAP|=0.752685, rank=3; ini kontribusi terhadap model, bukan bukti kausal/signifikansi.
+Interpretasi SHAP LightGBM (Class Weight):
+- Fitur dengan kontribusi global terbesar: Height.
+- Mean |SHAP| tertinggi: 5.328706 log-odds.
+- Ranking aktual: Height > Age (Month) > Gender > Weight (lihat Rank untuk nilai seri).
+- SHAP positif meningkatkan output menuju Stunted relatif terhadap nilai dasar; SHAP negatif menurunkannya.
+- Weight: Mean |SHAP|=0.237321, rank=4; ini kontribusi terhadap model, bukan bukti kausal/signifikansi.
+- Gender: Mean |SHAP|=0.593497, rank=3; ini kontribusi terhadap model, bukan bukti kausal/signifikansi.
+Perbandingan: ranking kedua algoritma identik pada sampel ini.
+Korelasi Spearman ranking empat fitur: 1.000000. Ini deskripsi kesesuaian ranking, bukan uji validitas atau signifikansi (NaN berarti ranking konstan).
+Tidak ada interpretasi yang dinyatakan lebih benar berdasarkan perbandingan ini.

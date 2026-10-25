@@ -1,0 +1,43 @@
+{
+  "section_code_status": "syntax and mathematical shape/additivity fixture checks passed",
+  "empirical_shap_status": "not executed: fitted searches and original experiment state unavailable",
+  "no_retraining_or_resampling_calls_in_new_section": true,
+  "existing_cell_count": 111,
+  "appended_cell_count": 18,
+  "original_executed_code_cells": 57,
+  "new_executed_code_cells": 0,
+  "supported_fixtures_passed": [
+    "2D scalar base",
+    "2D singleton base",
+    "list per class",
+    "3D output-last",
+    "Explanation single",
+    "Explanation multi",
+    "single local sample"
+  ],
+  "invalid_fixtures_rejected": [
+    "class-first 3D",
+    "wrong feature count",
+    "ambiguous base",
+    "wrong class direction",
+    "wrong probability"
+  ],
+  "selection_from_actual_saved_metrics": [
+    {
+      "Model": "LightGBM",
+      "Imbalance Method": "Class Weight",
+      "F1": 0.9521178637200736,
+      "Recall": 0.9574074074074074,
+      "ROC-AUC": 0.993405808909685
+    },
+    {
+      "Model": "XGBoost",
+      "Imbalance Method": "Baseline",
+      "F1": 0.9511928894433184,
+      "Recall": 0.941358024691358,
+      "ROC-AUC": 0.9927793426501436
+    }
+  ],
+  "shap_version_checked": "0.52.0",
+  "old_cells_sha256": "31c1be3eb45cef97dfcadf3d7c6e650830da71bcdf80d4a086aa13fc98176a2a"
+}

@@ -1,0 +1,30 @@
+1. Recall tertinggi: LightGBM — Class Weight (0.957407).
+2. F1 tertinggi: LightGBM — Class Weight (0.952118).
+3. ROC-AUC tertinggi: LightGBM — Class Weight (0.993406).
+4. Class Weight dibanding Baseline:
+   XGBoost: Recall naik (+0.007099); F1 turun (-0.003175); Precision -0.013656.
+   LightGBM: Recall naik (+0.012037); F1 naik (+0.000284); Precision -0.011499.
+5. SMOTE-NC dibanding Baseline:
+   XGBoost: Recall naik (+0.008642); F1 turun (-0.003241); Precision -0.015323.
+   LightGBM: Recall naik (+0.004938); F1 turun (-0.004011); Precision -0.013037.
+6. SMOTE-NC + ENN dibanding SMOTE-NC:
+   XGBoost: Recall turun (-0.025000); F1 turun (-0.002526); Precision +0.020861.
+   LightGBM: Recall turun (-0.023148); F1 turun (-0.000188); Precision +0.023684.
+7. SMOTE-NC dibanding Class Weight:
+   XGBoost: Recall naik (+0.001543); F1 turun (-0.000066); Precision -0.001667.
+   LightGBM: Recall turun (-0.007099); F1 turun (-0.004296); Precision -0.001538.
+7 (lanjutan). Efektivitas algorithm-level vs data-level dibaca dari selisih SMOTE-NC terhadap Class Weight di atas: positif mengunggulkan SMOTE-NC pada metrik tersebut, negatif mengunggulkan Class Weight; bila Recall/F1 berbeda arah, tidak ada pemenang tunggal.
+8. Dampak ENN:
+   XGBoost: Delta Recall=-0.025000, Delta F1=-0.002526, Delta FN=+81.
+   LightGBM: Delta Recall=-0.023148, Delta F1=-0.000188, Delta FN=+75.
+   Kebermaknaan statistik/praktis belum dapat ditetapkan dari satu split dan tanpa ambang manfaat yang ditentukan sebelumnya.
+9. Apakah resampling diperlukan pada dataset ini?
+   XGBoost: resampling tidak diperlukan untuk mencapai F1 terbaik pada split ini; SMOTE-NC vs Baseline: Delta F1=-0.003241, Delta Recall=+0.008642.
+   LightGBM: resampling tidak diperlukan untuk mencapai F1 terbaik pada split ini; SMOTE-NC vs Class Weight: Delta F1=-0.004296, Delta Recall=-0.007099.
+10. Trade-off terhadap Baseline:
+   XGBoost — Class Weight: trade-off Recall–Precision; Delta Recall=+0.007099, Delta Precision=-0.013656.
+   XGBoost — SMOTE-NC: trade-off Recall–Precision; Delta Recall=+0.008642, Delta Precision=-0.015323.
+   XGBoost — SMOTE-NC + ENN: trade-off Recall–Precision; Delta Recall=-0.016358, Delta Precision=+0.005539.
+   LightGBM — Class Weight: trade-off Recall–Precision; Delta Recall=+0.012037, Delta Precision=-0.011499.
+   LightGBM — SMOTE-NC: trade-off Recall–Precision; Delta Recall=+0.004938, Delta Precision=-0.013037.
+   LightGBM — SMOTE-NC + ENN: trade-off Recall–Precision; Delta Recall=-0.018210, Delta Precision=+0.010647.

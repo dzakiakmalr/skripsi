@@ -1,0 +1,4 @@
+,Not Stunted,Stunted
+Original,19091,12960
+SMOTE-NC,19091,19091
+SMOTE-NC + ENN,19091,17534

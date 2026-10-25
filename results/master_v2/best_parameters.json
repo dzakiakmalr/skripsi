@@ -1,0 +1,50 @@
+{
+  "XGBoost \u2014 Baseline": {
+    "model__gamma": 0.1,
+    "model__learning_rate": 0.1,
+    "model__max_depth": 7,
+    "model__n_estimators": 300
+  },
+  "XGBoost \u2014 Class Weight": {
+    "model__gamma": 0.3,
+    "model__learning_rate": 0.05,
+    "model__max_depth": 7,
+    "model__n_estimators": 300
+  },
+  "XGBoost \u2014 SMOTE-NC": {
+    "model__gamma": 0,
+    "model__learning_rate": 0.2,
+    "model__max_depth": 7,
+    "model__n_estimators": 100
+  },
+  "XGBoost \u2014 SMOTE-NC + ENN": {
+    "model__gamma": 0.3,
+    "model__learning_rate": 0.2,
+    "model__max_depth": 3,
+    "model__n_estimators": 300
+  },
+  "LightGBM \u2014 Baseline": {
+    "model__learning_rate": 0.1,
+    "model__max_depth": 5,
+    "model__n_estimators": 300,
+    "model__num_leaves": 63
+  },
+  "LightGBM \u2014 Class Weight": {
+    "model__learning_rate": 0.1,
+    "model__max_depth": 7,
+    "model__n_estimators": 200,
+    "model__num_leaves": 63
+  },
+  "LightGBM \u2014 SMOTE-NC": {
+    "model__learning_rate": 0.05,
+    "model__max_depth": 7,
+    "model__n_estimators": 300,
+    "model__num_leaves": 63
+  },
+  "LightGBM \u2014 SMOTE-NC + ENN": {
+    "model__learning_rate": 0.2,
+    "model__max_depth": 5,
+    "model__n_estimators": 200,
+    "model__num_leaves": 15
+  }
+}

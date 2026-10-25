@@ -1,0 +1,117 @@
+{
+  "created_utc": "2026-09-24T19:51:55.779542+00:00",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "random_state": 42,
+  "positive_class": 1,
+  "features": [
+    "Gender",
+    "Age (Month)",
+    "Weight",
+    "Height"
+  ],
+  "test_rows": 8013,
+  "packages": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "scikit-learn": null,
+    "imbalanced-learn": "0.14.2",
+    "xgboost": "3.4.1",
+    "lightgbm": "4.7.0"
+  },
+  "models": [
+    {
+      "algorithm": "XGBoost",
+      "method": "Baseline",
+      "best_parameters": {
+        "model__gamma": 0.1,
+        "model__learning_rate": 0.1,
+        "model__max_depth": 7,
+        "model__n_estimators": 300
+      },
+      "best_cv_f1": 0.9507935629754479
+    },
+    {
+      "algorithm": "XGBoost",
+      "method": "Class Weight",
+      "best_parameters": {
+        "model__gamma": 0.3,
+        "model__learning_rate": 0.05,
+        "model__max_depth": 7,
+        "model__n_estimators": 300
+      },
+      "best_cv_f1": 0.948610470299162
+    },
+    {
+      "algorithm": "XGBoost",
+      "method": "SMOTE-NC",
+      "best_parameters": {
+        "model__gamma": 0,
+        "model__learning_rate": 0.2,
+        "model__max_depth": 7,
+        "model__n_estimators": 100
+      },
+      "best_cv_f1": 0.948287268587914
+    },
+    {
+      "algorithm": "XGBoost",
+      "method": "SMOTE-NC + ENN",
+      "best_parameters": {
+        "model__gamma": 0.3,
+        "model__learning_rate": 0.2,
+        "model__max_depth": 3,
+        "model__n_estimators": 300
+      },
+      "best_cv_f1": 0.9465588929112598
+    },
+    {
+      "algorithm": "LightGBM",
+      "method": "Baseline",
+      "best_parameters": {
+        "model__learning_rate": 0.1,
+        "model__max_depth": 5,
+        "model__n_estimators": 300,
+        "model__num_leaves": 63
+      },
+      "best_cv_f1": 0.9507148636894593
+    },
+    {
+      "algorithm": "LightGBM",
+      "method": "Class Weight",
+      "best_parameters": {
+        "model__learning_rate": 0.1,
+        "model__max_depth": 7,
+        "model__n_estimators": 200,
+        "model__num_leaves": 63
+      },
+      "best_cv_f1": 0.9490434758703437
+    },
+    {
+      "algorithm": "LightGBM",
+      "method": "SMOTE-NC",
+      "best_parameters": {
+        "model__learning_rate": 0.05,
+        "model__max_depth": 7,
+        "model__n_estimators": 300,
+        "model__num_leaves": 63
+      },
+      "best_cv_f1": 0.9488281007313235
+    },
+    {
+      "algorithm": "LightGBM",
+      "method": "SMOTE-NC + ENN",
+      "best_parameters": {
+        "model__learning_rate": 0.2,
+        "model__max_depth": 5,
+        "model__n_estimators": 200,
+        "model__num_leaves": 15
+      },
+      "best_cv_f1": 0.9462296771556705
+    }
+  ],
+  "validation": "passed: both archives reproduce all 8 test predictions and probabilities",
+  "sha256": {
+    "best_models.joblib": "21242beeecd6f83e46ec1c155aaad9b209b44044bc0ccd6becc67534e7de1cb9",
+    "experiment_state.joblib": "5b236e2d6d906383681464fd4914b26292f70c93aa632e82760154e2cf3c90e8"
+  }
+}
